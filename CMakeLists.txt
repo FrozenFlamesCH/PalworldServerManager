@@ -13,6 +13,7 @@ option(BUILD_WITH_OPENGL "Build with OpenGL backend" ON)
 find_package(CURL REQUIRED)
 find_package(OpenSSL REQUIRED)
 find_package(Threads REQUIRED)
+find_package(fmt CONFIG REQUIRED)
 
 if(BUILD_WITH_OPENGL)
     find_package(OpenGL REQUIRED)
