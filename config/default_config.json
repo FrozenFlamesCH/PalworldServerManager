@@ -1,0 +1,69 @@
+{
+    "window": {
+        "width": 1600,
+        "height": 900,
+        "maximized": false
+    },
+    "ui": {
+        "fontSize": 16.0,
+        "theme": "dark"
+    },
+    "vanilla": {
+        "host": "127.0.0.1",
+        "port": 8212,
+        "password": ""
+    },
+    "paldefender": {
+        "host": "127.0.0.1",
+        "port": 8214,
+        "apiKey": ""
+    },
+    "rcon": {
+        "host": "127.0.0.1",
+        "port": 25575,
+        "password": ""
+    },
+    "pst": {
+        "levelSavPath": "",
+        "syncInterval": 60
+    },
+    "server": {
+        "exePath": "",
+        "workingDir": "",
+        "launchArgs": [],
+        "autoLaunchOnStart": false,
+        "autoRestartOnCrash": false,
+        "restartDelay": 10,
+        "maxRestartAttempts": 5,
+        "pollInterval": 5,
+        "gracefulShutdown": true,
+        "shutdownCountdown": 30,
+        "shutdownMessage": "Server shutting down in {seconds} seconds!"
+    },
+    "backup": {
+        "outputPath": "backups",
+        "intervalMinutes": 60,
+        "retentionDays": 7
+    },
+    "database": {
+        "path": "palworld_manager.db"
+    },
+    "notifications": {
+        "desktopOnCrash": true,
+        "desktopOnBan": true,
+        "desktopOnCheat": true,
+        "soundOnCrash": true
+    },
+    "scan": {
+        "intervalMinutes": 30,
+        "autoAction": false,
+        "suspicionThreshold": 50
+    },
+    "api": {
+        "enabled": false,
+        "port": 8300
+    },
+    "app": {
+        "threadPoolSize": 4
+    }
+}
