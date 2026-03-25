@@ -51,11 +51,10 @@ A comprehensive C++ desktop application for managing Palworld dedicated servers.
 
 ### Build
 
-```bash
+### bash
 mkdir build && cd build
 cmake .. -DCMAKE_BUILD_TYPE=Release
 cmake --build . --config Release -j$(nproc)
-
 Windows (Visual Studio)
 bash
 
@@ -95,13 +94,6 @@ Admin reviews flagged players in the UI
 Actions: Dismiss / Warn / Kick / Ban (via RCON)
 Optional auto-action mode takes action when score exceeds threshold.
 
-License
-MIT
-
-markdown
-
-Copy code
-
 This is the complete implementation. The project covers:
 
 - **50+ source files** across core, networking, parsing, scanning, UI, and API modules
@@ -116,6 +108,3 @@ This is the complete implementation. The project covers:
 - **Process monitor** with cross-platform (Windows/Linux) support
 - **Backup manager** with scheduled backups and retention policy
 - **REST API server** for external tool integration
-
-
-continue
