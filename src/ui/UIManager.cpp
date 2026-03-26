@@ -52,12 +52,14 @@ UIManager::~UIManager() {}
 
 void UIManager::render() {
     // Auto-refresh timer
-    m_refreshTimer += ImGui::GetIO().DeltaTime;
-    if (m_refreshTimer >= m_refreshInterval) {
-        m_refreshTimer = 0;
-        // Trigger background data refresh
+   m_refreshTimer += ImGui::GetIO().DeltaTime;
+if (m_refreshTimer >= m_refreshInterval) {
+    m_refreshTimer = 0;
+    // Trigger background data refresh
+    m_app.threadPool().enqueue([this] {
         m_app.serverManager().refreshData();
-    }
+    });
+}
 
     // Create dockspace over entire window
     ImGuiWindowFlags windowFlags = ImGuiWindowFlags_NoDocking | ImGuiWindowFlags_NoTitleBar |
