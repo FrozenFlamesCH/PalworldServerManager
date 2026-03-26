@@ -1,6 +1,5 @@
 cmake_minimum_required(VERSION 3.20)
 project(PalworldServerManager VERSION 1.0.0 LANGUAGES C CXX)
-
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
@@ -14,6 +13,7 @@ find_package(CURL REQUIRED)
 find_package(OpenSSL REQUIRED)
 find_package(Threads REQUIRED)
 find_package(fmt CONFIG REQUIRED)
+find_package(nlohmann_json CONFIG REQUIRED)
 
 if(BUILD_WITH_OPENGL)
     find_package(OpenGL REQUIRED)
@@ -42,16 +42,11 @@ target_link_libraries(imgui PUBLIC glfw OpenGL::GL)
 add_library(stb INTERFACE)
 target_include_directories(stb INTERFACE third_party/stb)
 
-# nlohmann json
-add_library(nlohmann_json INTERFACE)
-target_include_directories(nlohmann_json INTERFACE third_party/json/include)
-
 # Main executable
 file(GLOB_RECURSE SOURCES
     src/*.cpp
     src/*.h
 )
-
 add_executable(${PROJECT_NAME} ${SOURCES})
 
 target_include_directories(${PROJECT_NAME} PRIVATE
@@ -63,11 +58,14 @@ target_link_libraries(${PROJECT_NAME} PRIVATE
     imgui
     sqlite3
     stb
-    nlohmann_json
+    nlohmann_json::nlohmann_json
     CURL::libcurl
     OpenSSL::SSL
     OpenSSL::Crypto
     Threads::Threads
+    fmt::fmt
+    glfw
+    OpenGL::GL
 )
 
 if(WIN32)
@@ -83,6 +81,11 @@ target_compile_definitions(${PROJECT_NAME} PRIVATE
     IMGUI_DEFINE_MATH_OPERATORS
     PSM_VERSION="${PROJECT_VERSION}"
 )
+
+# UTF-8 for MSVC (required by fmt)
+if(MSVC)
+    target_compile_options(${PROJECT_NAME} PRIVATE /utf-8)
+endif()
 
 # Install
 install(TARGETS ${PROJECT_NAME} RUNTIME DESTINATION bin)
