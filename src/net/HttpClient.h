@@ -46,8 +46,8 @@ private:
     static size_t writeCallback(char* ptr, size_t size, size_t nmemb, std::string* data);
     static size_t headerCallback(char* buffer, size_t size, size_t nitems, std::map<std::string, std::string>* headers);
 
-    int m_timeout = 10;
+    int m_timeout = 1;
     std::string m_basicAuth;
 };
 
-} // namespace PSM
+} // namespace PSMy
