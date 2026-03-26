@@ -14,8 +14,10 @@ struct GuildMember {
 };
 
 struct GuildBase {
-    std::string id;
-    std::string name;
+    std::string id;            // used by MapRenderer, GuildPanel, PalDefenderAPI
+    std::string name;          // used by MapRenderer, UIManager
+    std::string guildId;       // used by MapPanel
+    std::string guildName;     // used by MapPanel
     float x = 0, y = 0, z = 0;
     int palCount = 0;
     int level = 0;
