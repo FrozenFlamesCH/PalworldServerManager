@@ -1,5 +1,11 @@
 #include "Application.h"
 
+#include <GLFW/glfw3.h>
+#include <imgui.h>
+#include <imgui_impl_glfw.h>
+#include <imgui_impl_opengl3.h>
+
+
 #include "core/Config.h"
 #include "core/Database.h"
 #include "core/Logger.h"

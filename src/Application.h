@@ -1,10 +1,11 @@
 #pragma once
 
-#include <GLFW/glfw3.h>
-
 #include <memory>
 #include <string>
 #include <atomic>
+
+// Forward declare GLFWwindow - include glfw3.h only in Application.cpp
+struct GLFWwindow;
 
 #define PSM_VERSION "1.0.0"
 
