@@ -1,13 +1,16 @@
-// FontAwesome Icon Constants
+// FontAwesome icon constants for all UI panels and features
 
-#ifndef ICON_DEFINITIONS_H
-#define ICON_DEFINITIONS_H
-
-// Icon constants for FontAwesome icons
-#define ICON_HOME "\uf015"
-#define ICON_USER "\uf007"
-#define ICON_SETTINGS "\uf013"
-#define ICON_INFO "\uf129"
-#define ICON_PHONE "\uf095"
-
-#endif // ICON_DEFINITIONS_H
+const ICON_DASHBOARD = 'fas fa-tachometer-alt'; // Dashboard icon
+const ICON_PLAYERS = 'fas fa-users'; // Players icon
+const ICON_MAP = 'fas fa-map'; // Map icon
+const ICON_INVENTORY = 'fas fa-box-open'; // Inventory icon
+const ICON_GUILDS = 'fas fa-users-cog'; // Guilds icon
+const ICON_COMMUNICATION = 'fas fa-comments'; // Communication icon
+const ICON_RESEARCH = 'fas fa-flask'; // Research icon
+const ICON_PAL_SPAWNING = 'fas fa-dove'; // Pal spawning icon
+const ICON_WORLD_CONTROL = 'fas fa-globe'; // World control icon
+const ICON_BACKUPS = 'fas fa-cloud-upload-alt'; // Backups icon
+const ICON_ANALYTICS = 'fas fa-chart-line'; // Analytics icon
+const ICON_SECURITY = 'fas fa-shield-alt'; // Security icon
+const ICON_SCANNER = 'fas fa-search'; // Scanner icon
+const ICON_SETTINGS = 'fas fa-cog'; // Settings icon
