@@ -14,5 +14,3 @@ private:
     int m_ancientPts = 0;
 };
 } // namespace PSM
-
-cpp

@@ -13,5 +13,3 @@ private:
     char m_ipBuf[64] = "";
 };
 } // namespace PSM
-
-cpp

@@ -11,5 +11,3 @@ private:
     int m_selectedCategory = 0;
 };
 } // namespace PSM
-
-cpp

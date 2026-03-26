@@ -13,5 +13,3 @@ private:
     std::string m_restorePath;
 };
 } // namespace PSM
-
-cpp

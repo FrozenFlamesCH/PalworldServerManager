@@ -12,5 +12,3 @@ private:
     bool m_shutdownConfirm = false;
 };
 } // namespace PSM
-
-cpp

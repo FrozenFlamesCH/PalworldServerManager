@@ -10,5 +10,3 @@ private:
     Application& m_app;
 };
 } // namespace PSM
-
-cpp
